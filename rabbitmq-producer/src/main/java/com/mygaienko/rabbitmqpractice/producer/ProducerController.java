@@ -24,8 +24,13 @@ public class ProducerController {
         this.bindings = bindings;
     }
 
-    @PostMapping()
-    public void postMessage(@RequestBody ProducerRequest producerRequest) throws JsonProcessingException {
+    @PostMapping("/post1")
+    public void postMessage1(@RequestBody ProducerRequest producerRequest) throws JsonProcessingException {
         bindings.output1().send(new GenericMessage<>(objectMapper.writeValueAsString(producerRequest)));
+    }
+
+    @PostMapping("/post2")
+    public void postMessage2(@RequestBody ProducerRequest producerRequest) throws JsonProcessingException {
+        bindings.output2().send(new GenericMessage<>(objectMapper.writeValueAsString(producerRequest)));
     }
 }

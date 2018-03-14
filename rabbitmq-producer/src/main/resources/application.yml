@@ -6,12 +6,14 @@ spring:
   cloud:
     stream:
       bindings:
-#        input:
-#          destination: queue.log.messages
-#          binder: local_rabbit
         output1:
           destination: com.mygaienko.rabbitmqpractice
-#          binder: local_rabbit
+          producer:
+            requiredGroups: post1
+        output2:
+          destination: com.mygaienko.rabbitmqpractice
+          producer:
+            requiredGroups: post2
       binders:
         local_rabbit:
           type: rabbit
@@ -24,3 +26,6 @@ spring:
                 password: guest
                 virtual-host: /
       default-binder: local_rabbit
+  activemq:
+    pool:
+      use-anonymous-producers:

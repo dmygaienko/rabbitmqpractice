@@ -8,6 +8,10 @@ spring:
       bindings:
         input1:
           destination: com.mygaienko.rabbitmqpractice
+          group: post1
+        input2:
+          destination: com.mygaienko.rabbitmqpractice
+          group: post2
       binders:
         local_rabbit:
           type: rabbit
