@@ -18,6 +18,7 @@ spring:
           destination: com.mygaienko.rabbitmqpractice1
           producer:
             exchangeType: direct
+            routingKeyExpression: headers.type
           bindingRoutingKey: post3
       binders:
         local_rabbit:
