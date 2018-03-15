@@ -5,21 +5,32 @@ server:
 spring:
   cloud:
     stream:
+
       bindings:
         output1:
           destination: com.mygaienko.rabbitmqpractice
           producer:
             requiredGroups: post1
+
         output2:
           destination: com.mygaienko.rabbitmqpractice
           producer:
             requiredGroups: post2
+
         output3:
           destination: com.mygaienko.rabbitmqpractice1
           producer:
             exchangeType: direct
             routingKeyExpression: headers.type
           bindingRoutingKey: post3
+
+        output4:
+          destination: com.mygaienko.rabbitmqpractice.partitioned
+          group: doPart
+          producer:
+            partitionKeyExpression: payload.id
+            partitionCount: 2
+
       binders:
         local_rabbit:
           type: rabbit

@@ -5,18 +5,27 @@ server:
 spring:
   cloud:
     stream:
+      instanceIndex: 0
+
       bindings:
         input1:
           destination: com.mygaienko.rabbitmqpractice
           group: post1
+
         input2:
           destination: com.mygaienko.rabbitmqpractice
           group: post2
+
         input3:
           destination: com.mygaienko.rabbitmqpractice1
           bindingRoutingKey: post3
-          consumer:
-            exchangeType: direct
+          consumer.exchangeType: direct
+
+        input4:
+          destination: com.mygaienko.rabbitmqpractice.partitioned
+          group: doPart
+          consumer.partitioned: true
+
       binders:
         local_rabbit:
           type: rabbit

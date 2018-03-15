@@ -23,4 +23,9 @@ public class ConsumerService {
     public void consume3(String payload) {
         System.out.println("Consumer 3: Received payload: " + payload);
     }
+
+    @StreamListener(ConsumerBindings.INPUT4)
+    public void consume4(String payload) {
+        System.out.println("Consumer 4: Received payload: " + payload);
+    }
 }

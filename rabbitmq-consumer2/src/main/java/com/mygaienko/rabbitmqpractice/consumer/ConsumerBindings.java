@@ -12,11 +12,16 @@ public interface ConsumerBindings {
 
     String INPUT3 = "input3";
 
+    String INPUT4 = "input4";
+
     @Input(INPUT1)
     SubscribableChannel input1();
 
     @Input(INPUT3)
     SubscribableChannel input3();
+
+    @Input(INPUT4)
+    SubscribableChannel input4();
 
 
 }

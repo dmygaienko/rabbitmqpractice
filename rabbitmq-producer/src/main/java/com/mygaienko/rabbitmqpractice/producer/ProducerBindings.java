@@ -14,6 +14,8 @@ public interface ProducerBindings {
 
     String OUTPUT3 = "output3";
 
+    String OUTPUT4 = "output4";
+
     @Output(OUTPUT1)
     MessageChannel output1();
 
@@ -22,5 +24,8 @@ public interface ProducerBindings {
 
     @Output(OUTPUT3)
     MessageChannel output3();
+
+    @Output(OUTPUT4)
+    MessageChannel output4();
 
 }
