@@ -14,6 +14,11 @@ spring:
           destination: com.mygaienko.rabbitmqpractice
           producer:
             requiredGroups: post2
+        output3:
+          destination: com.mygaienko.rabbitmqpractice1
+          producer:
+            exchangeType: direct
+          bindingRoutingKey: post3
       binders:
         local_rabbit:
           type: rabbit

@@ -12,6 +12,11 @@ spring:
         input2:
           destination: com.mygaienko.rabbitmqpractice
           group: post2
+        input3:
+          destination: com.mygaienko.rabbitmqpractice1
+          bindingRoutingKey: post3
+          consumer:
+            exchangeType: direct
       binders:
         local_rabbit:
           type: rabbit
