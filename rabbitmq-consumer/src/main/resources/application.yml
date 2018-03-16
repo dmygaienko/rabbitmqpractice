@@ -1,11 +1,12 @@
 server:
-  port: 8071
+  port: ${server_port:8071}
 
+consumer.index: ${instance_index:0}
 
 spring:
   cloud:
     stream:
-      instanceIndex: 0
+      instanceIndex: ${instance_index:0}
 
       bindings:
         input1:
@@ -25,6 +26,9 @@ spring:
           destination: com.mygaienko.rabbitmqpractice.partitioned
           group: doPart
           consumer.partitioned: true
+
+        input5Topic:
+          destination: com.mygaienko.rabbitmqpractice.topic
 
       binders:
         local_rabbit:

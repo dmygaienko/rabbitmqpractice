@@ -44,4 +44,9 @@ public class ProducerController {
         bindings.output4().send(new GenericMessage<>(producerRequest));
     }
 
+    @PostMapping("/post5")
+    public void postMessage5(@RequestBody ProducerRequest producerRequest) throws JsonProcessingException {
+        bindings.output5().send(new GenericMessage<>(producerRequest));
+    }
+
 }
