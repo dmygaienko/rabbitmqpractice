@@ -36,6 +36,11 @@ public class ConsumerService {
         System.out.println("Consumer 4: Received payload: " + payload);
     }
 
+    @StreamListener(ConsumerBindings.INPUT41)
+    public void consume41(String payload) {
+        System.out.println("Consumer 41: Received payload: " + payload);
+    }
+
     @StreamListener(ConsumerBindings.INPUT5)
     public void consume5(String payload) {
         System.out.println("InstanceIndex " + instanceIndex + "; Consumer 5; Received payload: " + payload);
