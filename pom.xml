@@ -9,7 +9,6 @@
 	<modules>
 		<module>rabbitmq-producer</module>
 		<module>rabbitmq-consumer</module>
-		<module>rabbitmq-consumer2</module>
 	</modules>
 	<packaging>pom</packaging>
 
