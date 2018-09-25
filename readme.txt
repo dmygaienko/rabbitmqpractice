@@ -4,3 +4,5 @@ https://www.cloudamqp.com/blog/2015-09-03-part4-rabbitmq-for-beginners-exchanges
 commit1
 
 commit11
+
+commit from f1
