@@ -67,7 +67,7 @@ public class ConsumerService {
     }
 
     private boolean partitionOk(Map<String, String> map) {
-        return instanceIndex == map.get("id").hashCode() % 2;
+        return instanceIndex == map.get("id").hashCode() % 4;
     }
 
     @StreamListener(ConsumerBindings.INPUT5)

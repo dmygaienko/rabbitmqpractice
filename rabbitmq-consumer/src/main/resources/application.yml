@@ -6,6 +6,8 @@ consumer.index: ${instance_index:0}
 spring:
   cloud:
     stream:
+      rabbit.bindings.input42.consumer.acknowledge-mode: MANUAL
+
       instanceIndex: ${instance_index:0}
 
       bindings:
