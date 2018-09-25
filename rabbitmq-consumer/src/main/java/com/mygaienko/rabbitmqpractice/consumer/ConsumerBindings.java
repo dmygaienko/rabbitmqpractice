@@ -18,6 +18,8 @@ public interface ConsumerBindings {
 
     String INPUT41 = "input41";
 
+    String INPUT42 = "input42";
+
     String INPUT5 = "input5Topic";
 
     @Input(INPUT1)
@@ -34,6 +36,9 @@ public interface ConsumerBindings {
 
     @Input(INPUT41)
     SubscribableChannel input41();
+
+    @Input(INPUT42)
+    SubscribableChannel input42();
 
     @Input(INPUT5)
     SubscribableChannel input5();
